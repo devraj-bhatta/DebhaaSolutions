@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.aboutus-logo {
+    height: 40px;
+    margin-right: 30px;
+}
+
+nav {
+    margin-bottom: 30px;
+}
+
+
+main {
+    height: 100vh;
+}
+/* This is for message of contact */
+p.h1 {
+    margin: 20px 0px 0px 20px;
+}
+.aboutus-description {
+    margin: 6px 0px 50px 20px;
+}
+
+.aboutus-description-samacharhub {
+    color: #0275d8;
+    font-weight: bold;
+}
+.aboutus-description-devrajbhatta a {
+    color: #0275d8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.disclaimer {
+    margin: 6px 0px 50px 20px;
+    font-weight: 600;
+}
+
+
+/* This is for footer */
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 50px;
+    background-color: #f3f3f3;
+    margin-top: 70px;
+    padding-bottom: 40px;
+}
+
+.footer-image-container, .footer-image-container img {
+    height: 100px;
+    margin:8px 0px 10px 16px;
+}
+
+.footer-button {
+    width: 50%;
+    margin: 20px 0px 6px 30px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-followus {
+    margin-left: 30px;
+    margin-top: 20px;
+    color: rgb(159, 159, 159);
+}
+
+.footer-left i {
+    padding-left: 10px;
+    font-size: 20px;
+    color: #0275d8;
+    transition: all 0.3s ease;
+}
+.footer-followus i:hover {
+    transform: translate(-2px);
+}
+
+.footer-right, .footer-middle, .footer-right {
+    /* padding: 20px 40px; */
+}
+
+.footer-middle li, .footer-right li {
+    list-style: none;
+    padding: 4px;
+    transition: all 0.3s ease;
+} 
+
+.footer-middle li:hover,  .footer-right li:hover {
+    text-decoration: underline;
+}
+
+/* This is for copyright */
+.copyright-container {
+    margin: 10px 0px;
+    padding: 6px 6px;
+}
+
+.copyright-container img {
+    display: inline-block;
+    height: 30px;
+}
+
+.copyright-container h6 {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+/* This is for responsive [mobile phone] */
+@media (max-width:767px) {
+    .aboutus-description {
+        margin: 16px 20px 30px 16px;
+    }
+    .disclaimer {
+        margin: 0px 20px 30px 16px;
+        font-weight: 600;
+    }    
+
+    .footer-container {
+        display: grid;
+        grid-template-columns:1fr;
+        row-gap: 50px;
+        background-color: #f3f3f3;
+    }
+   #search-text {
+    width: 70%;
+   }
+}

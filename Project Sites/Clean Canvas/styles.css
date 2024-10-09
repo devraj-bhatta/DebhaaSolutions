@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+header {
+    background: #485494;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 5px 0 20px;
+}
+
+.upload-container {
+    margin: 20px auto;
+}
+
+.upload-box {
+    border: 2px solid #485494;
+    padding: 20px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    max-width: 400px; /* Limit the width of the upload box */
+}
+
+#imagePreview {
+    margin-top: 10px;
+    display: inline-block;
+    max-width: 100%;
+}
+
+#imagePreview img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Set maximum height to keep image small */
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    background: #485494;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+}
+
+button:hover {
+    background: #4053bd;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.about-text {
+    text-align: left;
+    margin-right: 20px;
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-text p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: rgb(66, 66, 66);
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-us {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    display: flex;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background: #485494;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #4053bd;
+}
+
+.contact-us {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the container */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #485494; /* Blue border for the text boxes */
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+button[type="submit"] {
+    background: #485494;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #4053bd;
+}
+
+
+footer {
+    background-color: #485494;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-right {
+    margin-bottom: 10px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (min-width: 600px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer-left, .footer-right {
+        margin-bottom: 0;
+    }
+}

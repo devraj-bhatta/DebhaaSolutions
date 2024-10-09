@@ -1,0 +1,191 @@
+ *{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+main {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main .container {
+    height: 300px;
+    width: 450px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.215);
+    position: absolute;
+}
+
+main .container h1 {
+    font-weight: 700;
+    margin: 20px;
+    font-size: 30px;
+}
+
+main p {
+    width: 100%;
+    height: 100px;
+    padding: 0px 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+main li {
+    list-style: none;
+}
+
+main .content i:last-child {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+main .content i:first-child {
+    margin-left: 20px;
+}
+
+main .content {
+    display: flex;
+    padding: 10px;
+}
+
+main .author {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;;
+    justify-content: flex-end;
+    font-size: 14px;
+    padding: 0px 20px;
+    font-style: italic;
+}
+main  .author .name {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.653);
+}
+
+main span:first-child {
+    margin: -7px 5px 0 0;
+}
+
+
+main .button {
+    border-top: 1px solid black;
+    margin: 0px 30px;
+}
+
+main ul{
+    display: flex;
+}
+
+main ul li {
+    padding: 2px 12px;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.826);
+    color: white;
+    border-radius: 50%;
+    height: 28px;
+    width: 8px;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: blac;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+main ul li:hover {
+    background-color:rgba(0, 0, 255, 0.68);
+    color: white;
+}
+
+main button {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    align-self: flex-end;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.826);
+    color: white;
+    font-weight: 600;
+    right: 30px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+main button:hover {
+    background-color: rgba(0, 0, 255, 0.68);
+    color: white;
+}
+
+#website {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    margin: 13px;
+    margin-left: 120px;
+    border: 2px solid rgba(0, 0, 0, 0.826);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* This is for footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.826);
+    height: 100px;
+    text-align: center;
+}
+footer h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.76);
+    padding: 15px 0px 1px 0px;
+}
+
+footer h5 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(255, 255, 255, 0.39);
+    margin-bottom: 10px;
+}
+
+footer .icon, a {
+    color: rgba(255, 255, 255, 0.39);
+    transition: 0.3s ease-in;
+    padding: 0 2px;
+}
+footer .icon:hover {
+    color: rgba(0, 0, 255, 0.68);
+}
+
+
+
+
+
+
+/* This is for responsive (Mobile View). */
+@media (max-width: 767px) {
+    main .container {
+        height: 350px;
+        width: 350px;
+    }
+
+    main p {
+        width: 100%;
+        height: 110px;
+        font-size: 20px;
+    }
+}
