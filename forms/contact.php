@@ -1,42 +1,38 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+// Database connection
+$servername = "localhost";
+$username = "root"; // Default XAMPP username
+$password = ""; // Default XAMPP password (empty)
+$dbname = "debhaasolutions"; // Your database name
 
-  // Replace contact@example.com with your real receiving email address
-  
-  $receiving_email_address = 'info@debhaasolutions.xyz';
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+// Get form data
+$name = $_POST['name'];
+$email = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+// Get current date and time for the register_date
+$register_date = date('Y-m-d H:i:s');  // Format: YYYY-MM-DD HH:MM:SS
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+// Prepare the SQL query to insert data
+$sql = "INSERT INTO contactform (name, email, subject, message, register_date) 
+        VALUES ('$name', '$email', '$subject', '$message', '$register_date')";
 
-  echo $contact->send();
+// Execute the query and check for errors
+if ($conn->query($sql) === TRUE) {
+    echo "Message received! Thank you for contacting us.";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// Close the database connection
+$conn->close();
 ?>

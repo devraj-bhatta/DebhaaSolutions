@@ -228,3 +228,26 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+
+//------------------------------------------------------------------------------------------------------
+document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  let formData = new FormData(this);
+
+  fetch("newsletter.php", {
+      method: "POST",
+      body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+      console.log("Success:", data);
+      document.querySelector(".sent-message").style.display = "block";
+  })
+  .catch(error => {
+      console.error("Error:", error);
+      document.querySelector(".error-message").style.display = "block";
+  });
+});
